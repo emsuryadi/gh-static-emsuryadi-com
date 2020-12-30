@@ -6,4 +6,5 @@ https://gh-static.emsuryadi.com
 
 Konten:
 
-- uts-webpro-2020
+- [uts-webpro-2020](https://gh-static.emsuryadi.com/uts-webpro-2020/)
+- [praktikum-webpro-2020](https://gh-static.emsuryadi.com/praktikum-webpro-2020/)
