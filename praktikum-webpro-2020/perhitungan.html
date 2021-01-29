@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tugas Tanggal 25-01-2021</title>
+	</head>
+	<body>
+		<h2>Tugas Web Programming 25-01-2021</h2>
+		<b>Muhamad Suryadi - STI201801610</b>
+		<br /><br />
+		<hr>
+		<h4>Konversi Angka ke Huruf</h4>
+		<div>
+			<input id="angka" type="number" placeholder="Masukan Angka"/> = <span id="hasilKonversi">?</span>
+			<br /><br />
+			<button id="konversi" type="button" onclick="konversi();">Konversi</button>
+		</div>
+		<hr>
+		<h4>Kalkulator</h4>
+		<div>
+			<input id="bil1" type="number" placeholder="Bilangan 1"/><br />
+			<input id="bil2" type="number" placeholder="Bilangan 2"/><br />
+			Hasil: <span id="hasil">?</span>
+			<br /><br />
+			<button id="hitungTambah" type="button" onclick="hitung('+');">+</button>
+			<button id="hitungKurang" type="button" onclick="hitung('-');">&ndash;</button>
+			<button id="hitungKali" type="button" onclick="hitung('*');">x</button>
+			<button id="hitungBagi" type="button" onclick="hitung('/');">/</button>
+		</div>
+		<script>
+			function konversi() {
+				var angka = Number(document.getElementById("angka").value);
+				var hasil = "?";
+				if (angka >= 0 && angka <= 40) { hasil = "E"; }
+				else if (angka >= 41 && angka <= 55) { hasil = "D"; }
+				else if (angka >= 56 && angka <= 60) { hasil = "C"; }
+				else if (angka >= 61 && angka <= 65) { hasil = "BC"; }
+				else if (angka >= 66 && angka <= 70) { hasil = "B"; }
+				else if (angka >= 71 && angka <= 80) { hasil = "AB"; }
+				else if (angka >= 81 && angka <= 100) { hasil = "A"; }
+				document.getElementById("hasilKonversi").innerHTML = hasil;
+			}
+			function hitung(op) {
+				var bil1 = document.getElementById("bil1").value;
+				var bil2 = document.getElementById("bil2").value;
+				var hasil = 0;
+				if (op == '+') {
+					hasil = Number(bil1) + Number(bil2);
+				} else if (op == '-') {
+					hasil = Number(bil1) - Number(bil2);
+				} else if (op == '*') {
+					hasil = Number(bil1) * Number(bil2);
+				} else if (op == '/') {
+					hasil = Number(bil1) / Number(bil2);
+				}
+				document.getElementById("hasil").innerHTML = hasil;
+			}
+		</script>
+	</body>
+</html>
